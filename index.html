@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер Игра</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="resultMessage" style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); z-index: 1000;"></div>
+
+    <ul class="screen">
+        <li>
+            <h1>Игра «Кликер»</h1>
+            <p>Время: <span id="timer">30</span> сек</p>
+            <p>Очки: <span id="score">0</span></p>
+            <div id="gameArea"></div>
+            <button id="startButton">Начать игру</button>
+        </li>
+        <li>
+            <h2>Топ-5 результатов</h2>
+            <ol id="highScores"></ol>
+        </li>
+    </ul>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
