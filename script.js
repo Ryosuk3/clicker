@@ -21,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'images/6.jpg'
     ];
 
-    let gameOver = false;
-
     function startGame() {
-        gameOver = false; 
         score = 0;
         timeLeft = 30;
         scoreDisplay.textContent = score;
@@ -101,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         targets.forEach(target => target.remove());
         targets = [];
-
-        gameOver = true; 
     }
 
     function saveScore(newScore) {
@@ -122,14 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
             highScoresList.appendChild(li);
         });
 
-        if (gameOver) {
-            if (highScores[0] === score) {
-                displayResultImage('record.jpg');
-            } else if (score < 10) {
-                displayResultImage('lose.jpg');
-            } else if (highScores.indexOf(score) < 5) {
-                displayResultImage('top.jpg');
-            }
+        if (highScores[0] === score) {
+            displayResultImage('record.jpg');
+        } else if (score < 10) {
+            displayResultImage('lose.jpg');
+        } else if (highScores.indexOf(score) < 5) {
+            displayResultImage('top.jpg');
         }
     }
 
@@ -146,4 +139,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     startButton.addEventListener("click", startGame);
+    updateHighScores();
 });
