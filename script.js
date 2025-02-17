@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 1000);
 
-        spawnInterval = setInterval(spawnTarget, 750);
+        spawnInterval = setInterval(spawnTarget, 500);
     }
 
     function spawnTarget() {
